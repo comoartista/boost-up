@@ -5,10 +5,10 @@ import { generatePastelColor } from "../lib/utils";
 export default function Advice() {
   const [showAdvice, setShowAdvice] = useState(false);
 
-  const handleAdvice = (event) => {
-    if (event.target.textContent === "Advice") {
+  const handleAdvice = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (event.currentTarget.textContent === "Advice") {
       setShowAdvice(true);
-    } else if (event.target.textContent === "Encourage") {
+    } else if (event.currentTarget.textContent === "Encourage") {
       console.log("Encourage");
     }
   };
